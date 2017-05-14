@@ -32,5 +32,3 @@
  		}
 	}
 	 header("location: ../index.php");
- 	
-?>
