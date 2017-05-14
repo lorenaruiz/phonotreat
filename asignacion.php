@@ -66,26 +66,13 @@
 			<section id="content" class="col-lg-7 col-md-8 col-sm-12">
 
 				<div class="cloud">
-					<h1>#NombreRol</h1>
+					<h1>#Asignacion</h1>
 				</div>
 
 				<div class="content-bg">
-					<h2 class="entry-title post-title">Datos Personales</h2>
+					<h2 class="entry-title post-title">Ingrese Documento</h2>
 					<form  action="php/guardarUsuario.php" method="post">
 						<strong>Nombre</strong><input type="text" name="nombre">
-						<strong>Identificación</strong><input type="text" name="id">
-						<strong>Fecha de nacimiento</strong><input type="date" name="fecha">
-						<strong>Género</strong>
-						<select id="genres" name="genero" class="input_select">
-							<option value="M">Masculino</option>
-							<option value="F">Femenino</option>
-						</select>
-						<strong>Usuario</strong><input type="text" name="username">
-						<strong>Contraseña</strong><input type="password" name="password">
-						<strong>Rol</strong>
-						<select id="roles" name = "rol" class="input_select">
-							<?php include ("php/listarRoles.php"); ?>
-						</select>
 						<input class="button green pull-left" type="submit" value="&#xf138; Guardar">
 					</form>
 					

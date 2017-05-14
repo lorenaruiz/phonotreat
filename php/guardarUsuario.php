@@ -13,15 +13,18 @@
 	if (!$result) {
 		header("location: ../crearpersona.php");
 	} else if (mysqli_num_rows($result)==0) {
-		$genres = ($genres == "Masculino")? "M" : "F";
+
 		$sql = "INSERT INTO persona (Nombre_Persona,Fecha_Nacimiento_Persona,Identificacion_Persona,Genero_Persona,Password_Persona,Usuario_Persona".
 			   ",fk_rol_persona,Estado_persona) VALUES ('$nombre','$fecha',$id,'$genres','$pass','$username',$rol,1)";
+			   	
 		if (mysqli_query($conexion,$sql) === TRUE) {
 			echo "New record created successfully";
+			header("location: ../crearpersona.php");
 		} else {
 			echo "Error: " . $sql . "<br>" . $conexion->error;
 		}
 	} else {
+		header("location: ../crearpersona.php");
 		echo "usuario ya existe";
 	}
 
