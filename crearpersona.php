@@ -3,6 +3,7 @@
 <!--[if (gte IE 9)|!(IE)]><!--> <html class="not-ie no-js">  <!--<![endif]-->
 
 <head>
+		<?php include 'php/verificarRol.php';?>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -70,7 +71,7 @@
 
 				<div class="content-bg">
 					<h2 class="entry-title post-title">Datos Personales</h2>
-					<form  action="#" method="post">
+					<form  action="php/guardarUsuario.php" method="post">
 						<strong>Nombre</strong><input type="text" name="nombre">
 						<strong>Identificación</strong><input type="text" name="id">
 						<strong>Fecha de nacimiento</strong><input type="date" name="fecha">

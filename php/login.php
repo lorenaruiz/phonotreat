@@ -31,6 +31,6 @@
 		 	 		}
  		}
 	}
-	 
+	 header("location: ../index.php");
  	
 ?>
