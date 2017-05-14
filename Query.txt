@@ -1,0 +1,6 @@
+INSERT INTO `estado` (`idEstado`, `Nombre_Estado`) VALUES ('1', 'Activo'), ('2', 'Inactivo');
+INSERT INTO `fonema` (`idFonema`, `Nombre_Fonema`, `Estado_Fonema`) VALUES ('1', 'R-RR', '1'), ('2', 'S', '1');
+INSERT INTO `nivel` (`idNivel`, `Nombre_Nivel`, `Estado_Nivel`) VALUES ('1', 'BASICO', '1'), ('2', 'INTERMEDIO', '1'),('3', 'AVANZADO', '1');
+INSERT INTO `rol` (`idRol`, `Nombre_Rol`, `Estado_Rol`) VALUES ('1', 'ADMINISTRADOR', '1'),('2', 'FONOAUDIÓLOGO', '1'), ('3', 'PACIENTE', '1');
+INSERT INTO `persona` (`idPersona`, `Nombre_Persona`, `Fecha_Nacimiento_Persona`, `Identificacion_Persona`, `Genero_Persona`, `Password_Persona`, `Usuario_Persona`, `fk_rol_persona`, `Estado_persona`) VALUES ('1', 'ADMINISTRADOR ', '2017-06-13', '123456789', 'M', 'Colombia2017', 'admin', '1', '1');
+

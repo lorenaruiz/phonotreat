@@ -1,50 +1,33 @@
 <?php 
 	//require 'index.php';
 
-	session_start();
-
+	
+	include("../php/conexion.php");
 	$username = "";
 	$password = "";
+	$contador= 0;
 	
 	if(isset($_POST['username'])){
 		$username = $_POST['username'];
 	}
 	if (isset($_POST['password'])) {
 		$password = $_POST['password'];
-
 	}
 	
 	echo $username ." : ".$password;
-
-	$q = 'SELECT * FROM Persona WHERE Usuario_Persona=:username AND Password_Persona=:password';
-
-	$query = $dbh->prepare($q);
-
-	$query->execute(array(':username' => $username, ':password' => $password));
-
-
-	if($query->rowCount() == 0){
-		header('Location: index.php?err=1');
-	}else{
-
-		$row = $query->fetch(PDO::FETCH_ASSOC);
-
-		session_regenerate_id();
-		$_SESSION['sess_user_id'] = $row['Nombre_Persona'];
-		$_SESSION['sess_username'] = $row['Usuario_Persona'];
-        $_SESSION['sess_userrole'] = $row['fk_rol_persona'];
-
-        echo $_SESSION['sess_userrole'];
-		session_write_close();
-
-		if( $_SESSION['sess_userrole'] == "admin"){
-			header('Location: index.php');
-		}else{
-			header('Location: index.php');
-		}
-		
-		
-	}
-
-
+	
+	 $resultado = mysqli_query($conexion , "SELECT * FROM persona where Usuario_Persona = '$username' and Password_Persona = '$password' " ); 
+  	if(!$resultado) {
+	    die("Error: no se pudo realizar la consulta");	
+	 	 while($fila = mysqli_fetch_assoc($resultado)) 
+	  		{ 
+	   	 		$_SESSION['sesson_usser_id']= $fila['idPersona'];
+	   	 		$_SESSION['sesson_usser_name']= $fila['Nombre_Persona'];
+	   	 		$_SESSION['sesson_usser_rol']= $fila['fk_rol_persona'];
+	 	 	} 
+	 	 if (mysql_num_rows($resultado)==0) {
+	 	 	print "No existe el usuario en el sistema";
+	 	 }
+ 	}
+ 	header("location: ../index.php");
 ?>

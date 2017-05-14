@@ -18,11 +18,6 @@
 		<script src="js/modernizr.js"></script>
 		<script src="js/respond.js"></script>
         
-        <?php
-        include("php/conexion.php");
-   		conectar($_POST['username'],$_POST['password']);
-   		echo $_POST['username'];
-		?>
         
 	</head>
 	<body>
