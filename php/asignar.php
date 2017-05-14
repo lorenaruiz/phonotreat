@@ -1,5 +1,5 @@
 <?php
-include("../php/conexion.php");
+include("verificarRol.php");
 if(isset($_POST['id'])){
 		$id = $_POST['id'];
 	}

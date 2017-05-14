@@ -3,10 +3,7 @@
 <!--[if (gte IE 9)|!(IE)]><!--> <html class="not-ie no-js">  <!--<![endif]-->
 
 <head>
-<<<<<<< Updated upstream
 		<?php include 'php/verificarRol.php';?>
-=======
->>>>>>> Stashed changes
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -69,35 +66,39 @@
 			<section id="content" class="col-lg-7 col-md-8 col-sm-12">
 
 				<div class="cloud">
-<<<<<<< Updated upstream
-					<h1>#Asignacion</h1>
-				</div>
-
-				<div class="content-bg">
-					<h2 class="entry-title post-title">Ingrese Documento</h2>
-					<form  action="php/guardarUsuario.php" method="post">
-						<strong>Nombre</strong><input type="text" name="nombre">
-=======
 					<h1>Asignar Fonema</h1>
 				</div>
 
-				<div class="content-bg">
+				<div class="content-bg row">
 					<h2 class="entry-title post-title">Consultar Paciente</h2>
-					<form  action="#" method="post">
-						<strong>Identificación</strong><input type="text" name="id" value='".$fila['idPersona']."'>
-						<strong>Nombre</strong><input type="text" name="nombre" value='"Nombre_Persona"' readonly>
-						<strong>Género</strong><input type="text" name="genero" value='"Genero_Persona"' readonly>
-						<strong>Fonemas</strong><br/>
-						<input type="checkbox" name="r" id="r-facil">Fonema /r/ Básico &emsp; &emsp;
-						<input type="checkbox" name="s" id="r-medio">Fonema /r/ Intermedio &emsp; &emsp; 
-						<input type="checkbox" name="s" id="r-dificil">Fonema /r/ Avanzado <br/>
-						<input type="checkbox" name="r" id="s-facil">Fonema /s/ Básico &emsp; &emsp; 
-						<input type="checkbox" name="s" id="s-medio">Fonema /s/ Intermedio &emsp; &emsp; 
-						<input type="checkbox" name="s" id="s-dificil">Fonema /s/ Avanzado <br/>
-						<br/>
->>>>>>> Stashed changes
-						<input class="button green pull-left" type="submit" value="&#xf138; Guardar">
-					</form>
+					<div class="col-lg-12 col-md-12 col-sm-12 margin-bottom">
+						<form method="post">
+							<strong>Identificación</strong>
+							<input id="Identificación" type="text" name="id" value=""><br/>
+							<br/>
+							<input class="button green pull-left" type="reset" onclick="buscarPaciente()" value="&#xf138; Buscar">
+						</form>
+					</div>
+					<br>
+					<div class="col-lg-12 col-md-12 col-sm-12">
+						<form  action="#" method="post">
+							<input id="idPersona" type="hidden" name="idPersona" value="">
+							<strong>Nombre</strong><input id="obtainedname" type="text" name="nombre" value="" readonly>
+							<strong>Género</strong><input id="obtainedGenre" type="text" name="genero" value="" readonly>
+							<strong>Fonemas</strong><br/>
+							<section id="asignaciones">
+								<input type="checkbox" name="r" id="r-facil">Fonema /r/ Básico &emsp; &emsp;
+								<input type="checkbox" name="s" id="r-medio">Fonema /r/ Intermedio &emsp; &emsp; 
+								<input type="checkbox" name="s" id="r-dificil">Fonema /r/ Avanzado <br/>
+								<input type="checkbox" name="r" id="s-facil">Fonema /s/ Básico &emsp; &emsp; 
+								<input type="checkbox" name="s" id="s-medio">Fonema /s/ Intermedio &emsp; &emsp; 
+								<input type="checkbox" name="s" id="s-dificil">Fonema /s/ Avanzado <br/>
+								<br/>
+							</section>
+							<input class="button green pull-left" type="submit" value="&#xf138; Guardar">
+						</form>
+					</div>
+						
 					
 					<div class="clearfix"></div>
 				</div>
@@ -122,45 +123,16 @@
 						<a href="#">&#xf166;</a>
 					</div>
 					<div class="col-lg-6 col-md-6 col-sm-12 footer-links">
-<<<<<<< Updated upstream
 						<div class="col-lg-12 col-md-12">&copy; 2017 Proyecto PhonoTreat</div>
 					</div>
 				</div>
 			</div>
-			
-=======
-						<div class="col-lg-12 col-md-12">&copy; 2013 Kindergarten</div>
-					</div>
-				</div>
-			</div>
->>>>>>> Stashed changes
 		</footer>
 
 		<script src="js/jquery-1.10.1.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
 		<script src="js/custom.js"></script>
 		<script src="js/jquery.prettyPhoto.js"></script>
-		<script>
-			(function(i, s, o, g, r, a, m) {
-				i['GoogleAnalyticsObject'] = r;
-				i[r] = i[r] || function() {
-					(i[r].q = i[r].q || []).push(arguments)
-				}, i[r].l = 1 * new Date();
-				a = s.createElement(o),
-						m = s.getElementsByTagName(o)[0];
-				a.async = 1;
-				a.src = g;
-				m.parentNode.insertBefore(a, m)
-			})(window, document, 'script', '../../../www.google-analytics.com/analytics.js', 'ga');
-
-			ga('create', 'UA-86539134-2', 'auto');
-			ga('send', 'pageview');
-
-		</script>
+		<script src="js/buscarPaciente.js"></script>
 	</body>
-
-<<<<<<< Updated upstream
-<!-- Mirrored from craftedpixels.net/demo-html/kindergarten-template/blog-post.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 07 May 2017 20:10:16 GMT -->
-=======
->>>>>>> Stashed changes
 </html>

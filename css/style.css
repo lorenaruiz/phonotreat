@@ -69,6 +69,12 @@ img	{
 	min-height: 1300px;
 }*/
 
+/* this is what I'm changing*/
+
+.margin-bottom {
+    margin-bottom: 35px;
+}
+
 .input_select {
     background: #fdf1d1;
     border-radius: 4px;
