@@ -87,13 +87,6 @@
 							<strong>Género</strong><input id="obtainedGenre" type="text" name="genero" value="" readonly>
 							<strong>Fonemas</strong><br/>
 							<section id="asignaciones">
-								<input type="checkbox" name="r" id="r-facil">Fonema /r/ Básico &emsp; &emsp;
-								<input type="checkbox" name="s" id="r-medio">Fonema /r/ Intermedio &emsp; &emsp; 
-								<input type="checkbox" name="s" id="r-dificil">Fonema /r/ Avanzado <br/>
-								<input type="checkbox" name="r" id="s-facil">Fonema /s/ Básico &emsp; &emsp; 
-								<input type="checkbox" name="s" id="s-medio">Fonema /s/ Intermedio &emsp; &emsp; 
-								<input type="checkbox" name="s" id="s-dificil">Fonema /s/ Avanzado <br/>
-								<br/>
 							</section>
 							<input class="button green pull-left" type="submit" value="&#xf138; Guardar">
 						</form>

@@ -27,7 +27,7 @@
 				$fonema = $row["Fonema"];
 				$nivel = $row["Nivel"];
 				$htmlStructures .= "<input type='checkbox' name='estructuras[]' value='$idEstructura'>"
-				                  ."Fonema /$fonema/ $nivel &emsp; &emsp;";
+				                  ."Fonema /$fonema/ $nivel<br/>";
 			}
 		}
 
