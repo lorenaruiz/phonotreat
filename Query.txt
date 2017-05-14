@@ -4,3 +4,4 @@ INSERT INTO `nivel` (`idNivel`, `Nombre_Nivel`, `Estado_Nivel`) VALUES ('1', 'BA
 INSERT INTO `rol` (`idRol`, `Nombre_Rol`, `Estado_Rol`) VALUES ('1', 'ADMINISTRADOR', '1'),('2', 'FONOAUDIÓLOGO', '1'), ('3', 'PACIENTE', '1');
 INSERT INTO `persona` (`idPersona`, `Nombre_Persona`, `Fecha_Nacimiento_Persona`, `Identificacion_Persona`, `Genero_Persona`, `Password_Persona`, `Usuario_Persona`, `fk_rol_persona`, `Estado_persona`) VALUES ('1', 'ADMINISTRADOR ', '2017-06-13', '123456789', 'M', 'Colombia2017', 'admin', '1', '1');
 
+CREATE VIEW vw_estructuras_activas AS SELECT idEstructura , f.Nombre_Fonema as Fonema , n.Nombre_Nivel as Nivel FROM estructura e INNER JOIN fonema f ON f.idFonema = e.Fk_idFonema INNER JOIN nivel n ON n.idNivel = e.Fk_idNivel WHERE f.Estado_Fonema= 1 and n.Estado_Nivel = 1 and e.Estado_Estructura = 1
