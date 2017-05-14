@@ -47,7 +47,7 @@
 							<li class="has-children">
 								<a>Ingresar</a>
 								<ul class="children">
-                                <form  action="php/gestorsesion.php" method="post">
+                                <form  action="php/login.php" method="post">
 									<li><input type="text" name="username" placeholder="Usuario"></li>
 									<li><input type="password" name="password" placeholder="Contraseña"></li>
 									<li><input class="button red" type="submit" value="&#xf138; ENTRAR"></li>
