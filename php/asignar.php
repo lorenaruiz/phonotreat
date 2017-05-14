@@ -9,7 +9,7 @@ if(isset($_POST['id'])){
 	    die("Error: no se pudo realizar la consulta");	
 	 	 while($fila = mysqli_fetch_assoc($consulta)) 
 	  		{ 
-	  			echo "<input type="text" name="id" value='"$fila['idPersona']"'>";
+	  			echo "<input type=text name=id value='$fila[idPersona]'>";
 	 	 	} 
 	 	 if (mysql_num_rows($resultado)==0) {
 	 	 	print "No existe el usuario en el sistema";

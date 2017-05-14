@@ -28,37 +28,10 @@
 				<a href="index.html" class="logo">
 					<img src="images/logo.png" alt="" />
 				</a>
-				<nav role="navigation">
-					<!-- Agrupacion en toggle para visualización en moviles -->
-					<div class="navbar-header">
-						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-							<span class="sr-only">Toggle</span>
-							<span class="fa">&#xf0c9;</span>
-						</button>
-					</div>
-
-					<!-- Collección de links de navegación y formularios para toggle -->
-					<div class="collapse navbar-collapse navbar-ex1-collapse">
-						<ul>
-							<li class="active"><a href="index-2.html">Inicio</a></li>
-							<li><a href="nosotros.html">Nosotros</a></li>
-                            <li><a href="padres.html">Padres</a></li>
-							<li><a href="contacto.html">Contacto</a></li>
-							<li class="has-children">
-								<a>Ingresar</a>
-								<ul class="children">
-                                <form  action="php/login.php" method="post">
-									<li><input type="text" name="username" placeholder="Usuario"></li>
-									<li><input type="password" name="password" placeholder="Contraseña"></li>
-									<li><input class="button red" type="submit" value="&#xf138; ENTRAR"></li>
-                                    </form>
-								</ul>
-							</li>
-						</ul>
-					</div><!-- /.navbar-collapse -->
-					<div id="sun"></div>
-
-				</nav>
+				<?php
+				include("php/conexion.php");
+				include("Menu.php");
+				?>
 				<div class="clearfix"></div>
 				
 			</header>

@@ -1,5 +1,8 @@
 <?php 
 	include("../php/conexion.php");	
+	$_SESSION['session_usser_id']= "";
+	$_SESSION['session_usser_name']= "";
+	$_SESSION['session_usser_rol']= "";
 	if(isset($_POST['username'] ,$_POST['password'])) 
 	{	
 		$resultado = mysqli_query($conexion , "SELECT * FROM persona where Usuario_Persona = '".$_POST['username']."' and Password_Persona = '".$_POST['password']."' " ); 
@@ -16,21 +19,27 @@
 	 	 		} 
 		 	 if (mysqli_num_rows($resultado)!=0) 
 		 	 	{
+		 	 		?>
 		 	 		
+		 	 			<script type="text/javascript">
+		 	 				alert("Datos Correctos!");
+		 	 				document.location =window.location = "../index.php";
+
+		 	 			</script>
+		 	 			<?php
 		 	 	}
 		 	 	else
 		 	 		{	 	 			
 		 	 			
 		 	 			?>
 		 	 			<script type="text/javascript">
-		 	 				alert("Joder");
+		 	 				alert("Datos incorrectos!");
+		 	 				document.location =window.location = "../index.php";
 
 		 	 			</script>
 		 	 			<?php
-		 	 			//header("location: ../index.php");
+		 	 			
 		 	 		}
  		}
-	}
-	 header("location: ../index.php");
- 	
+	}	
 ?>
