@@ -7,6 +7,7 @@
 	    header("location: index.php");
 	    die();
 	}
+	$user_rol = $_SESSION['session_usser_rol'];
 
 
  ?>

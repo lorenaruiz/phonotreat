@@ -82,6 +82,10 @@
 						</datalist>
 						<strong>Usuario</strong><input type="text" name="username">
 						<strong>Contraseña</strong><input type="password" name="password">
+						<strong>Rol</strong>
+						<select id="roles" name = "rol" class="input_select">
+							<?php include ("php/listarRoles.php"); ?>
+						</select>
 						<input class="button green pull-left" type="submit" value="&#xf138; Guardar">
 					</form>
 					

@@ -69,6 +69,17 @@ img	{
 	min-height: 1300px;
 }*/
 
+#roles.input_select {
+    background: #fdf1d1;
+    border-radius: 4px;
+    border: 0;
+    color: #313131;
+    font-family: 'Solomon Normal', sans-serif;
+    height: 28px;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
 h2	{
     font: 28px 'dimboregular', 'Fira Sans', sans-serif;
     line-height: 30px;
