@@ -54,7 +54,7 @@
 					</div>
 					<br>
 					<div class="col-lg-12 col-md-12 col-sm-12">
-						<form  action="#" method="post">
+						<form  action="php/guardarEstructura.php" method="post">
 							<input id="idPersona" type="hidden" name="idPersona" value="">
 							<strong>Nombre</strong><input id="obtainedname" type="text" name="nombre" value="" readonly>
 							<strong>Género</strong><input id="obtainedGenre" type="text" name="genero" value="" readonly>
